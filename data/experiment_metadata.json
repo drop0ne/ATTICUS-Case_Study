@@ -1,0 +1,40 @@
+{
+  "study_id": "CS-01",
+  "title": "GPT-5.6 Sol + ATTICUS vs GPT-5.6 Sol Raw on First Proof Batch 2",
+  "date": "2026-08-09",
+  "design": "paired blinded-before-scoring one-shot case study",
+  "n_problems": 10,
+  "conditions": {
+    "A_after_unblinding": "GPT-5.6 Sol + ATTICUS",
+    "B_after_unblinding": "GPT-5.6 Sol raw"
+  },
+  "generation_controls": {
+    "web_browsing": false,
+    "external_retrieval": false,
+    "connected_apps": false,
+    "hints_or_corrections": false,
+    "attempts_per_problem_per_condition": 1,
+    "reference_solutions_visible_during_generation": false
+  },
+  "scoring_blinding": "Condition identities concealed until all ten scores/statuses were locked.",
+  "rubric": {
+    "correctness": 40,
+    "completeness": 20,
+    "unsupported_claim_resistance": 10,
+    "error_self_check": 10,
+    "calibration": 10,
+    "exposition_rigor": 10
+  },
+  "headline": {
+    "ATTICUS_total": 904,
+    "Sol_raw_total": 873,
+    "ATTICUS_mean": 90.4,
+    "Sol_raw_mean": 87.3,
+    "ATTICUS_wins": 7,
+    "Sol_raw_wins": 3
+  },
+  "contamination_risk": "UNRESOLVED",
+  "atticus_framework_public": false,
+  "atticus_access": "restricted/request-only",
+  "upstream_benchmark": "https://github.com/1stproof/batch-2"
+}

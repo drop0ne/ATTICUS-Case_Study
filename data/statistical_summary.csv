@@ -1,0 +1,22 @@
+metric,value
+ATTICUS mean score,90.4
+Sol raw mean score,87.3
+Mean paired delta,3.1
+Median paired delta,2.0
+Paired delta SD,9.515484456634061
+Cohen dz,0.3257847789177695
+ATTICUS wins,7.0
+Sol raw wins,3.0
+Exact two-sided sign-test p,0.34375
+Wilcoxon exact two-sided p,0.431640625
+Paired t-test two-sided p,0.32979567901451046
+95% t CI lower,-3.7069675197096923
+95% t CI upper,9.906967519709692
+Bootstrap 95% CI lower,-2.3
+Bootstrap 95% CI upper,8.8
+Mean delta excluding P09,1.0
+10% trimmed mean delta,2.625
+ATTICUS actual complete,4.0
+Sol raw actual complete,3.0
+ATTICUS false-complete,3.0
+Sol raw false-complete,3.0
