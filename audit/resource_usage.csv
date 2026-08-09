@@ -1,0 +1,5 @@
+submission,submitter,model_configuration,workflow,api_call_records,input_tokens,output_tokens,reasoning_tokens,total_tokens,cost_usd,runtime_or_elapsed_seconds,instance,notes
+A,IMProofBench,Mixed: GPT-5.5 Pro xhigh author/critic + GPT-5.5 compute + Claude Opus 4.7 + Gemini 3.1 Pro,author_critic_long; code/web tools; multi-round,491,289214786,18942249,7104693,308157035,3185.6397507,82502,r7i.2xlarge,Reasoning reporting conventions vary by provider; total from run_summary.json
+B,UCLA,GPT-5.5 Pro xhigh,deep literature search + advisor/solver + verifier/refiner,992,39469077,20084032,16099918,59553109,4799.19807,83188,r7i.2xlarge,Aggregate call elapsed 582712.029 s due parallel work
+C,OpenAI direct,openai/gpt-5.5-pro-20260423,direct research prompt with built-in web search,10,1048011,465108,429683,1513119,116.59977,20832.48,not present as submission source,144 built-in web searches; elapsed sum excludes P06 missing elapsed_s
+D,Princeton,Gemini 3.1 Pro Preview,multi-agent W=9 D=6 + BS detector + graders + literature verification,4726,36935929,7406140,70942140,115284209,,27948,r7i.2xlarge,"Raw token_log total; solutions.json reports 94,457,462 (20,826,747 fewer)"

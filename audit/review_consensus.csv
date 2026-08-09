@@ -1,0 +1,41 @@
+problem,submission,submitter,reviewer_count,consensus_status,audit_note
+1,A,IMProofBench,2,PASS,Publishable/minor; correct
+1,B,UCLA,3,PASS,Publishable/minor; correct
+1,C,OpenAI direct,2,PASS,Publishable/minor; correct
+1,D,Princeton,2,REJECT,Wrong negative answer / theorem misuse
+2,A,IMProofBench,2,PASS,Working proof
+2,B,UCLA,3,PASS,Working proof
+2,C,OpenAI direct,2,PASS,Working proof
+2,D,Princeton,3,REJECT,Rejected
+3,A,IMProofBench,3,PARTIAL-PUBLISHABLE,Publishable partial progress; exact characterization remains open
+3,B,UCLA,3,REJECT,Rejected
+3,C,OpenAI direct,2,REJECT,False completion; unsupported/open sufficiency step
+3,D,Princeton,2,REJECT,Rejected
+4,A,IMProofBench,3,MAJOR,Substantial strategy/partial; original dichotomy not proved
+4,B,UCLA,3,REJECT,Rejected
+4,C,OpenAI direct,3,REJECT,Rejected
+4,D,Princeton,3,REJECT,Rejected
+5,A,IMProofBench,3,PASS,Correct full solution
+5,B,UCLA,3,REJECT,Rejected
+5,C,OpenAI direct,3,REJECT,Rejected
+5,D,Princeton,2,REJECT,Rejected
+6,A,IMProofBench,0,EMPTY,No substantive output; no reviews
+6,B,UCLA,3,PASS,Correct full solution
+6,C,OpenAI direct,3,PASS,Correct full solution
+6,D,Princeton,3,REJECT,Rejected
+7,A,IMProofBench,3,PASS,Correct full solution
+7,B,UCLA,3,PASS,Correct full solution
+7,C,OpenAI direct,3,PASS,Correct full solution
+7,D,Princeton,3,PASS,Correct full solution
+8,A,IMProofBench,3,MAJOR,Correct architecture but significant technical gap
+8,B,UCLA,2,MAJOR,Correct architecture but significant technical gap
+8,C,OpenAI direct,3,REJECT,Central modular-duality claim effectively assumed
+8,D,Princeton,2,REJECT,Rejected
+9,A,IMProofBench,2,PASS,Correct full solution
+9,B,UCLA,3,PASS,Correct full solution
+9,C,OpenAI direct,2,PASS,Correct full solution
+9,D,Princeton,3,REJECT,Rejected
+10,A,IMProofBench,3,MAJOR,Correct strategy but nontrivial DKEP gaps
+10,B,UCLA,2,REJECT,Does not solve graph-product theorem
+10,C,OpenAI direct,3,MAJOR,Correct strategy; main boundary support lemmas unjustified/incorrect
+10,D,Princeton,2,REJECT,Wrong definition / hallucinated proper-proximality criterion

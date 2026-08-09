@@ -1,0 +1,41 @@
+problem,submission,submitter,self_signal_type,self_positive,is_relaxation,human_full_pass,human_consensus,calibration_flag
+1,A,IMProofBench,solved,1,,True,PASS,
+1,B,UCLA,selector_verified,1,0,True,PASS,
+1,C,OpenAI direct,forced_complete_output,1,,True,PASS,
+1,D,Princeton,solved,1,,False,REJECT,FALSE_POSITIVE
+2,A,IMProofBench,solved,1,,True,PASS,
+2,B,UCLA,selector_verified,0,0,True,PASS,
+2,C,OpenAI direct,forced_complete_output,1,,True,PASS,
+2,D,Princeton,solved,0,,False,REJECT,
+3,A,IMProofBench,solved,0,,False,PARTIAL-PUBLISHABLE,
+3,B,UCLA,selector_verified,1,1,False,REJECT,
+3,C,OpenAI direct,forced_complete_output,1,,False,REJECT,FALSE_COMPLETE
+3,D,Princeton,solved,0,,False,REJECT,
+4,A,IMProofBench,solved,0,,False,MAJOR,
+4,B,UCLA,selector_verified,0,1,False,REJECT,
+4,C,OpenAI direct,forced_complete_output,1,,False,REJECT,FALSE_COMPLETE
+4,D,Princeton,solved,0,,False,REJECT,
+5,A,IMProofBench,solved,1,,True,PASS,
+5,B,UCLA,selector_verified,1,1,False,REJECT,
+5,C,OpenAI direct,forced_complete_output,1,,False,REJECT,FALSE_COMPLETE
+5,D,Princeton,solved,0,,False,REJECT,
+6,A,IMProofBench,solved,0,,False,EMPTY,
+6,B,UCLA,selector_verified,1,0,True,PASS,
+6,C,OpenAI direct,forced_complete_output,1,,True,PASS,
+6,D,Princeton,solved,0,,False,REJECT,
+7,A,IMProofBench,solved,1,,True,PASS,
+7,B,UCLA,selector_verified,1,0,True,PASS,
+7,C,OpenAI direct,forced_complete_output,1,,True,PASS,
+7,D,Princeton,solved,1,,True,PASS,
+8,A,IMProofBench,solved,1,,False,MAJOR,FALSE_POSITIVE
+8,B,UCLA,selector_verified,0,1,False,MAJOR,
+8,C,OpenAI direct,forced_complete_output,1,,False,REJECT,FALSE_COMPLETE
+8,D,Princeton,solved,1,,False,REJECT,FALSE_POSITIVE
+9,A,IMProofBench,solved,1,,True,PASS,
+9,B,UCLA,selector_verified,1,0,True,PASS,
+9,C,OpenAI direct,forced_complete_output,1,,True,PASS,
+9,D,Princeton,solved,0,,False,REJECT,
+10,A,IMProofBench,solved,1,,False,MAJOR,FALSE_POSITIVE
+10,B,UCLA,selector_verified,1,1,False,REJECT,
+10,C,OpenAI direct,forced_complete_output,1,,False,MAJOR,FALSE_COMPLETE
+10,D,Princeton,solved,1,,False,REJECT,FALSE_POSITIVE
