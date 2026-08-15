@@ -8,13 +8,13 @@ This repository publishes the data, scoring record, statistical analysis, and po
 
 | Measure | GPT-5.6 Sol + ATTICUS | GPT-5.6 Sol raw |
 |---|---:|---:|
-| Total rubric score | **904 / 1000** | 873 / 1000 |
-| Mean score | **90.4** | 87.3 |
-| Problem wins | **7** | 3 |
-| Judged-complete proofs | **4 / 10** | 3 / 10 |
+| Total rubric score | 904 / 1000 | 873 / 1000 |
+| Mean score | 90.4 | 87.3 |
+| Problem wins | 7 | 3 |
+| Judged-complete proofs | 4 / 10 | 3 / 10 |
 | False-complete declarations | 3 | 3 |
 
-Mean paired difference: **+3.1 points/problem for ATTICUS**.
+Mean paired difference: +3.1 points/problem for ATTICUS.
 
 The category decomposition is the more important result: mathematical correctness was effectively unchanged (**38.6/40 vs 38.5/40**), while completeness rose from **13.8/20 to 15.8/20**. Completeness accounted for **20 of the 31 net points (64.5%)** of the observed ATTICUS advantage.
 
@@ -30,6 +30,14 @@ The sample is small. The paired statistical tests do **not** establish significa
 - No human hints, corrections, or follow-up assistance during the attempt.
 - No reference solutions or referee reports available to the solver during generation.
 - Fixed 100-point rubric.
+- The 100-point rubric was authored by GPT-5.6 Sol operating under
+  ATTICUS — i.e. by the intervention under test. See Limitation 9.
+- Scoring was blind to condition identity but was performed by the
+  author of the intervention. Blinding and grader independence are
+  separate properties; only the first was satisfied.
+- Trials were run with multiple cases in flight concurrently and
+  encountered platform rate/capacity limits during execution. See
+  Limitation 11.
 - Samples labeled only A/B during evaluation.
 - Scores and qualitative statuses locked before condition identities were revealed.
 - After all ten scores were locked, the mapping was disclosed: **all Sample A = ATTICUS; all Sample B = Sol raw**.
@@ -76,11 +84,53 @@ The post-hoc audit was conducted against a full repository download supplied for
 7. **False completion remains unsolved.** Both conditions produced three false-complete declarations.
 8. **Public replication cannot be exact without authorized ATTICUS access.**
 
+9. **Rubric provenance.** The scoring rubric was written by the
+   intervention being evaluated. This is instrument-intervention
+   coupling: the criteria defining "completeness" — the dimension
+   carrying 64.5% of the net effect — were specified by the system
+   that scored higher on it. The direction and size of any resulting
+   bias is unmeasured. This is the most serious limitation in this
+   study and it was identified after publication of the initial
+   results.
+
+10. **Correctness dimension is ceilinged.** Mathematical correctness
+    scored 38.6/40 and 38.5/40, i.e. 96.5% and 96.3% of maximum,
+    leaving under 1.5 points of headroom. The flat correctness result
+    therefore cannot distinguish "no effect on correctness" from
+    "effect not measurable by this instrument." A 40-point correctness
+    scale that saturates above 96% on research-level problems, while
+    only 3–4 of 10 proofs are judged complete, is not discriminating
+    on the property its name denotes.
+
+11. **Concurrent execution and platform limits.** Multiple cases were
+    run simultaneously and encountered platform rate/capacity limits.
+    Whether this affected conditions symmetrically has not been
+    determined. If generation occurred in condition-blocked rather
+    than interleaved order, throttling effects alias with condition.
+
+12. **Condition-to-label assignment was constant, not randomized.**
+    All Sample A was the ATTICUS condition across all ten problems.
+    Any single correct inference of the mapping would compromise the
+    full set rather than one item. Future runs should randomize
+    assignment per problem.
+
+13. **Resource use was not matched between conditions.** Output
+    length, reasoning tokens, and wall time were not controlled or
+    reported. Completeness scores tracking output length is an
+    untested alternative explanation for the observed effect.
+
 ## What independent validation should do
 
 A serious replication should use 30–50+ research-level problems, 3–5 independent runs per condition/problem, identical resource limits, blind domain-expert grading, preregistered endpoints, and an intermediate verification-only ablation. Fresh/unpublished problems are strongly preferred to reduce contamination risk.
 
 Primary endpoint: **full-proof acceptance rate**. Secondary endpoints: completeness score, false-complete rate, calibration, self-checking, and tokens/time to an accepted proof.
+
+The rubric must not be authored by, or derived from, the intervention
+under test. Adopt a published instrument from the mathematical
+evaluation literature, or have one written by a party with no stake
+in the outcome, and freeze it before any output is generated. Any
+replacement rubric must discriminate on correctness at this problem
+difficulty rather than saturating.
 
 ## Peer review / contact
 
